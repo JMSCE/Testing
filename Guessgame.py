@@ -6,8 +6,8 @@ out_of_guesses = False
 def hint_help():
   hints = ["It has four legs", "It says 'meow'", "It's likes milk"]
   random.shuffle(hints)
-  for hint_function in hints:
-    hint_function()
+  for hint_function in hints[0,2]:
+      return result
 print("""Welcome to the guessing game. 
 You will have three attempts to guess the magic word.""")
 guess = input("What is your guess?:")
