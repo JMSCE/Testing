@@ -4,9 +4,10 @@ guess_count = 0
 guess_limit = 3
 out_of_guesses = False
 def hint_help():
-    hints = ("It has four legs", "It says 'meow'", "It likes milk")
-    random.choice(0,2)
-    hint_help()
+  hints = ["It has four legs", "It says 'meow'", "It's likes milk"]
+  random.shuffle(hints)
+  for hint_function in hints:
+    hint_function()
 print("""Welcome to the guessing game. 
 You will have three attempts to guess the magic word.""")
 guess = input("What is your guess?:")
