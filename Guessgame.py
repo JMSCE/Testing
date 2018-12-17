@@ -1,4 +1,4 @@
-import random
+from random import sample
 magic_word = ("flamingo")
 guess_count = 0
 guess_limit = 4
@@ -8,8 +8,8 @@ print("""Welcome to the guessing game. You will have five attempts to guess the 
 guess = input("What is your guess?:")
 while guess != magic_word and not (out_of_guesses):
     if guess_count < guess_limit:
-        hint = random.choice(hints) 
-        print("Hint: "+ hint)
+        hint = random.sample(hints,1) 
+        print("Hint: "+ str(hint))
         guess = input("Enter a guess: ")
         guess_count += 1
     else:
