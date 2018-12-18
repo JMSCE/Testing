@@ -9,7 +9,8 @@ print("Hi " + name + " that is a really stupid name. You must be embarrassed. An
 guess = input("What is your guess?:")
 while guess != magic_word and not (out_of_guesses):
     if guess_count < guess_limit:
-        hint = random.sample(hints,1) 
+        random.shuffle(hints)
+        hint = hints.pop(0)
         print("Hint: "+ str(hint))
         guess = input("Enter a guess: ")
         guess_count += 1
