@@ -1,4 +1,4 @@
-from random import sample
+import random
 magic_word = ("flamingo")
 guess_count = 0
 guess_limit = 4
